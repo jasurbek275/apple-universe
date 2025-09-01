@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Universe | Discover Innovation</title>
+    <link rel="icon" type="image/x-icon" href="https://www.apple.com/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #000000 0%, #2c3e50 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ffffff;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <i data-feather="apple" class="mr-2"></i>
+                <span>Apple</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#iphone" class="nav-link">iPhone</a>
+                <a href="#mac" class="nav-link">Mac</a>
+                <a href="#ipad" class="nav-link">iPad</a>
+                <a href="#watch" class="nav-link">Watch</a>
+                <a href="#airpods" class="nav-link">AirPods</a>
+                <a href="#tv" class="nav-link">TV & Home</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-gray-300"><i data-feather="search"></i></a>
+                <a href="#" class="hover:text-gray-300"><i data-feather="shopping-bag"></i></a>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">Welcome to Apple Universe</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Discover the magic of innovation. Explore our latest products designed to enrich your life.
+            </p>
+            <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#products" class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition">Shop Now</a>
+                <a href="#learn" class="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Latest Innovations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- iPhone -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/iphone/home/bf/images/overview/hero/iphone_15_pro__eqwrvyz1x7qu_large.jpg" alt="iPhone 15 Pro" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">Titanium. So strong. So light. So Pro.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">From $999</span>
+                        <a href="iphone.html" class="text-blue-600 hover:underline">Learn more →</a>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/macbook-pro/al/images/overview/hero/mbp_14_16__bprv9dk9sque_large.jpg" alt="MacBook Pro" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">MacBook Pro</h3>
+                    <p class="text-gray-600 mb-4">Mind-blowing. Head-turning.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">From $1599</span>
+                        <a href="mac.html" class="text-blue-600 hover:underline">Learn more →</a>
+                    </div>
+                </div>
+
+                <!-- Apple Watch -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/apple-watch-series-9/a/images/overview/hero/hero__dvsxv8smkkgi_large.jpg" alt="Apple Watch Series 9" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Apple Watch Series 9</h3>
+                    <p class="text-gray-600 mb-4">Smarter. Brighter. Mightier.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">From $399</span>
+                        <a href="watch.html" class="text-blue-600 hover:underline">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Explore Apple Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- iPhone -->
+                <a href="iphone.html" id="iphone" class="group bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
+                        <img src="https://www.apple.com/v/iphone/home/bf/images/overview/compare/compare_iphone_15_pro__f5h2p0x1k2ie_large.png" alt="iPhone" class="h-48 group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">iPhone</h3>
+                        <p class="text-gray-600">Our most powerful cameras. Our longest battery life ever.</p>
+                    </div>
+                </a>
+
+                <!-- Mac -->
+                <a href="mac.html" id="mac" class="group bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
+                        <img src="https://www.apple.com/v/mac/home/bf/images/overview/compare/compare_macbook_pro__bzeq4x0jz6qe_large.png" alt="Mac" class="h-48 group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mac</h3>
+                        <p class="text-gray-600">Incredible power. Incredibly simple.</p>
+                    </div>
+                </a>
+
+                <!-- iPad -->
+                <a href="ipad.html" id="ipad" class="group bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
+                        <img src="https://www.apple.com/v/ipad/home/bo/images/overview/compare/compare_ipad_pro__b0zq6wz4xwqe_large.png" alt="iPad" class="h-48 group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">iPad</h3>
+                        <p class="text-gray-600">Lovable. Drawable. Magical.</p>
+                    </div>
+                </a>
+
+                <!-- Watch -->
+                <a href="watch.html" id="watch" class="group bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
+                        <img src="https://www.apple.com/v/apple-watch-series-9/a/images/overview/compare/compare_s9__d4s9pcmxwpyq_large.png" alt="Apple Watch" class="h-48 group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Apple Watch</h3>
+                        <p class="text-gray-600">A healthy leap ahead.</p>
+                    </div>
+                </a>
+
+                <!-- AirPods -->
+                <a href="airpods.html" id="airpods" class="group bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
+                        <img src="https://www.apple.com/v/airpods/shared/compare/a/images/compare/compare_airpods_pro__dwe0nokq8vqu_large.png" alt="AirPods" class="h-48 group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AirPods</h3>
+                        <p class="text-gray-600">Magical connection. Exceptional sound.</p>
+                    </div>
+                </a>
+
+                <!-- TV & Home -->
+                <a href="tv.html" id="tv" class="group bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 bg-gradient-to-b from-gray-100 to-gray-200 flex items-center justify-center">
+                        <img src="https://www.apple.com/v/apple-tv-plus/ag/images/overview/bundle__bpykws9m4zq6_large.png" alt="TV & Home" class="h-48 group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">TV & Home</h3>
+                        <p class="text-gray-600">The best way to watch the shows and movies you love.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apple Services -->
+    <section id="learn" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Apple Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="music" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Apple Music</h3>
+                    <p class="text-gray-600">Over 100 million songs. All ad-free. Plus your entire music library.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="tv" class="text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Apple TV+</h3>
+                    <p class="text-gray-600">Original stories from the most creative minds in TV and film.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="cpu" class="text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Apple Arcade</h3>
+                    <p class="text-gray-600">Over 200 incredibly fun games with no ads and no in-app purchases.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="cloud" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">iCloud+</h3>
+                    <p class="text-gray-600">Everything you need. All in one place. And then some.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Shop and Learn</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Store</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mac</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">iPad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">iPhone</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Watch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Music</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple TV+</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Fitness+</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">iCloud</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple One</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Apple Store</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Find a Store</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Genius Bar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Today at Apple</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Camp</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Trade In</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">For Business</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple and Business</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shop for Business</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Apple</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Newsroom</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Leadership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Career Opportunities</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Investors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ethics & Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">Copyright © 2023 Apple Inc. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Use</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Sales and Refunds</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Legal</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Site Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>AOS.init();</script>
+    <script>const { animate } = anime;</script>
+    <script>feather.replace();</script>
+</body>
+</html>
+```
+
+<<<<<<< START_TITLE iphone.html >>>>>>> END_TITLE
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone | Apple</title>
+    <link rel="icon" type="image/x-icon" href="https://www.apple.com/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .iphone-gradient {
+            background: linear-gradient(135deg, #000000 0%, #2c3e50 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center">
+                <i data-feather="apple" class="mr-2"></i>
+                <span>Apple</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="iphone.html" class="text-white font-semibold">iPhone</a>
+                <a href="mac.html" class="text-gray-400 hover:text-white">Mac</a>
+                <a href="ipad.html" class="text-gray-400 hover:text-white">iPad</a>
+                <a href="watch.html" class="text-gray-400 hover:text-white">Watch</a>
+                <a href="airpods.html" class="text-gray-400 hover:text-white">AirPods</a>
+                <a href="tv.html" class="text-gray-400 hover:text-white">TV & Home</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-gray-300"><i data-feather="search"></i></a>
+                <a href="#" class="hover:text-gray-300"><i data-feather="shopping-bag"></i></a>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="iphone-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">iPhone 15 Pro</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Titanium. So strong. So light. So Pro.
+            </p>
+            <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#buy" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                <a href="#learn" class="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- iPhone Models -->
+    <section id="learn" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Which iPhone is right for you?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- iPhone 15 Pro -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/iphone/home/bf/images/overview/compare/compare_iphone_15_pro__f5h2p0x1k2ie_large.png" alt="iPhone 15 Pro" class="h-48 object-contain">
+                    </div>
+                    <div class="flex justify-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">New</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 text-center mb-6">The ultimate iPhone experience</p>
+                    <div class="text-center mb-6">
+                        <span class="text-3xl font-bold">From $999</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Titanium design</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> A17 Pro chip</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Pro camera system</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Action button</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> USB-C</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#buy" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                    </div>
+                </div>
+
+                <!-- iPhone 15 -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/iphone/home/bf/images/overview/compare/compare_iphone_15__f5h2p0x1k2ie_large.png" alt="iPhone 15" class="h-48 object-contain">
+                    </div>
+                    <div class="flex justify-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">New</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">iPhone 15</h3>
+                    <p class="text-gray-600 text-center mb-6">A total powerhouse</p>
+                    <div class="text-center mb-6">
+                        <span class="text-3xl font-bold">From $799</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Color-infused glass and aluminum</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> A16 Bionic chip</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Advanced dual-camera system</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Dynamic Island</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> USB-C</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#buy" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                    </div>
+                </div>
+
+                <!-- iPhone 14 -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/iphone/home/bf/images/overview/compare/compare_iphone_14__f5h2p0x1k2ie_large.png" alt="iPhone 14" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">iPhone 14</h3>
+                    <p class="text-gray-600 text-center mb-6">As amazing as ever</p>
+                    <div class="text-center mb-6">
+                        <span class="text-3xl font-bold">From $599</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Aerospace-grade aluminum</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> A15 Bionic chip</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Advanced dual-camera system</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Emergency SOS via satellite</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Lightning connector</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#buy" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Why iPhone?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">A17 Pro chip</h3>
+                    <p class="text-gray-600">The most powerful chip ever in a smartphone. Game-changing performance for gaming and pro workflows.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="camera" class="text-purple-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pro camera system</h3>
+                    <p class="text-gray-600">Our most advanced camera system ever with 48MP Main camera, new telephoto, and next-gen portraits.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="battery-charging" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">All-day battery life</h3>
+                    <p class="text-gray-600">Up to 29 hours of video playback. Fast charge to 50% in around 30 minutes with 20W adapter.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-red-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Privacy</h3>
+                    <p class="text-gray-600">Built with privacy in mind from the beginning. Features like App Tracking Transparency give you control.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="droplet" class="text-yellow-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Durable design</h3>
+                    <p class="text-gray-600">Ceramic Shield front. Titanium or aerospace-grade aluminum. Water resistance. Tough meets beautiful.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="wifi" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">5G</h3>
+                    <p class="text-gray-600">Superfast downloads, high-quality streaming, and responsive gaming with 5G speed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Ways to Buy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up">
+                    <h3 class="text-2xl font-semibold mb-4">Buy iPhone with Apple Card</h3>
+                    <p class="text-gray-600 mb-6">Pay 0% interest over 24 months when you choose to check out with Apple Card Monthly Installments.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Learn more about Apple Card →</a>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-4">Apple Trade In</h3>
+                    <p class="text-gray-600 mb-6">Get credit toward a new iPhone when you trade in your eligible smartphone. It's good for you and the planet.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">See what your device is worth →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Shop and Learn</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Store</a></li>
+                        <li><a href="mac.html" class="text-gray-400 hover:text-white">Mac</a></li>
+                        <li><a href="ipad.html" class="text-gray-400 hover:text-white">iPad</a></li>
+                        <li><a href="iphone.html" class="text-white">iPhone</a></li>
+                        <li><a href="watch.html" class="text-gray-400 hover:text-white">Watch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Music</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple TV+</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Fitness+</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">iCloud</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple One</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Apple Store</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Find a Store</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Genius Bar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Today at Apple</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Camp</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Trade In</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">For Business</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple and Business</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shop for Business</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Apple</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Newsroom</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Leadership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Career Opportunities</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Investors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ethics & Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">Copyright © 2023 Apple Inc. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Use</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Sales and Refunds</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Legal</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Site Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>AOS.init();</script>
+    <script>const { animate } = anime;</script>
+    <script>feather.replace();</script>
+</body>
+</html>
+```
+
+<<<<<<< START_TITLE mac.html >>>>>>> END_TITLE
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac | Apple</title>
+    <link rel="icon" type="image/x-icon" href="https://www.apple.com/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .mac-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1e3a8a 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center">
+                <i data-feather="apple" class="mr-2"></i>
+                <span>Apple</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="iphone.html" class="text-gray-400 hover:text-white">iPhone</a>
+                <a href="mac.html" class="text-white font-semibold">Mac</a>
+                <a href="ipad.html" class="text-gray-400 hover:text-white">iPad</a>
+                <a href="watch.html" class="text-gray-400 hover:text-white">Watch</a>
+                <a href="airpods.html" class="text-gray-400 hover:text-white">AirPods</a>
+                <a href="tv.html" class="text-gray-400 hover:text-white">TV & Home</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-gray-300"><i data-feather="search"></i></a>
+                <a href="#" class="hover:text-gray-300"><i data-feather="shopping-bag"></i></a>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="mac-gradient text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">MacBook Pro</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Mind-blowing. Head-turning.
+            </p>
+            <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#buy" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                <a href="#learn" class="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mac Models -->
+    <section id="learn" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Which Mac is right for you?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- MacBook Pro 14" -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/macbook-pro/al/images/overview/compare/compare_mbp_14__bq3jv6z4v36a_large.png" alt="MacBook Pro 14-inch" class="h-48 object-contain">
+                    </div>
+                    <div class="flex justify-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">New</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">MacBook Pro 14"</h3>
+                    <p class="text-gray-600 text-center mb-6">Supercharged for pros</p>
+                    <div class="text-center mb-6">
+                        <span class="text-3xl font-bold">From $1599</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> M3 Pro or M3 Max chip</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> 14.2-inch Liquid Retina XDR display</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Up to 22 hours battery life</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> 1080p FaceTime HD camera</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Six-speaker sound system</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#buy" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                    </div>
+                </div>
+
+                <!-- MacBook Air 15" -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="f fade-up" data-aos-delay="100">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/macbook-air/m/images/overview/compare/compare_mba_15__bq3jv6z4v36a_large.png" alt="MacBook Air 15-inch" class="h-48 object-contain">
+                    </div>
+                    <div class="flex justify-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">New</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">MacBook Air 15"</h3>
+                    <p class="text-gray-600 text-center mb-6">Impressively big. Impossibly thin.</p>
+                    <div class="text-center mb-6">
+                        <span class="text-3xl font-bold">From $1299</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> M2 chip</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> 15.3-inch Liquid Retina display</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Up to 18 hours battery life</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> 1080p FaceTime HD camera</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Four-speaker sound system</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#buy" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                    </div>
+                </div>
+
+                <!-- iMac -->
+                <div class="product-card bg-gray-50 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-center mb-6">
+                        <img src="https://www.apple.com/v/mac/home/bf/images/overview/compare/compare_imac__bq3jv6z4v36a_large.png" alt="iMac" class="h-48 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-2">iMac</h3>
+                    <p class="text-gray-600 text-center mb-6">Say hello to the colorful all-in-one</p>
+                    <div class="text-center mb-6">
+                        <span class="text-3xl font-bold">From $1299</span>
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> M1 chip</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> 24-inch 4.5K Retina display</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> 1080p FaceTime HD camera</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Six-speaker sound system</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-2"></i> Seven vibrant colors</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#buy" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Why Mac?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Apple silicon</h3>
+                    <p class="text-gray-600">M3, M3 Pro, and M3 Max chips deliver extraordinary performance and efficiency for pro workflows.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="monitor" class="text-purple-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Stunning displays</h3>
+                    <p class="text-gray-600">Liquid Retina XDR display with ProMotion for incredibly smooth visuals and true-to-life colors.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="battery-charging" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">All-day battery</h3>
+                    <p class="text-gray-600">Up to 22 hours of battery life. Go all day without needing to plug in.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-red-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Security</h3>
+                    <p class="text-gray-600">Built from the ground up with security in mind. Secure Enclave and Touch ID keep your data safe.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="feather" class="text-yellow-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Thin and light</h3>
+                    <p class="text-gray-600">Remarkably thin and light designs that are as beautiful as they are portable.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="wind" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Silent design</h3>
+                    <p class="text-gray-600">Fanless design means no noise, no matter how hard you're working.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Ways to Buy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up">
+                    <h3 class="text-2xl font-semibold mb-4">Buy Mac with Apple Card</h3>
+                    <p class="text-gray-600 mb-6">Pay 0% interest over 12 months when you choose to check out with Apple Card Monthly Installments.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">Learn more about Apple Card →</a>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-4">Apple Trade In</h3>
+                    <p class="text-gray-600 mb-6">Get credit toward a new Mac when you trade in your eligible computer. It's good for you and the planet.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">See what your device is worth →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Shop and Learn</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Store</a></li>
+                        <li><a href="mac.html" class="text-white">Mac</a></li>
+                        <li><a href="ipad.html" class="text-gray-400 hover:text-white">iPad</a></li>
+                        <li><a href="iphone.html" class="text-gray-400 hover:text-white">iPhone</a></li>
+                        <li><a href="watch.html" class="text-gray-400 hover:text-white">Watch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Music</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple TV+</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Fitness+</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">iCloud</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple One</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Apple Store</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Find a Store</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Genius Bar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Today at Apple</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Camp</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Trade In</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">For Business</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple and Business</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shop for Business</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Apple</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Newsroom</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Apple Leadership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Career Opportunities</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Investors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ethics & Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">Copyright © 2023 Apple Inc. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Use</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Sales and Refunds</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Legal</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Site Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>AOS.init();</script>
+    <script>const { animate } = anime;</script>
+    <script>feather.replace();</script>
+</body>
+</html>
